@@ -56,6 +56,7 @@ import com.mobile.domain.SikumTmuta;
 
 
 //@Api(description = "manage all the projects data")
+@CrossOrigin
 @Controller
 @RequestMapping("/api/notrulesivuk/")
 public class NotruLesivukController {

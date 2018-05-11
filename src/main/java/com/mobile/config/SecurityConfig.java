@@ -18,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  */
 //https://github.com/gustavoponce7/SpringSecurityUserDetailsService/blob/master/src/main/java/com/example/service/UserServiceImpl.java
 @EnableWebSecurity
+
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private UserRepository userRepository;
     public SecurityConfig(UserRepository userRepository) {
@@ -27,10 +28,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .cors().and()
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/login/**", "/index").hasRole("MAINMANAGER")
-                .antMatchers("/api/**").hasRole("MAINMANAGER")
+                .antMatchers("/logon/**", "/index").hasRole("MAINMANAGER")
+                .antMatchers("/apo/**").hasRole("MAINMANAGER")
                 .and()
                 .httpBasic();
         //.formLogin().loginPage("/login").failureUrl("/login-error");
@@ -38,12 +40,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // @formatter:on
 
     // @formatter:off
-   /* @Autowired
+   @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
                 .withUser("user").password("password").roles("USER");
-    }*/
+    }
 
     @Bean
     public UserDetailsService userDetailsService() {
