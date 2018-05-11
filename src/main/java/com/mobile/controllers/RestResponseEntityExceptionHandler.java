@@ -17,7 +17,7 @@ import java.sql.SQLException;
 /**
  * Created by jt on 10/6/17.
  */
-@CrossOrigin
+//@CrossOrigin
 @ControllerAdvice
 public class RestResponseEntityExceptionHandler  {
 

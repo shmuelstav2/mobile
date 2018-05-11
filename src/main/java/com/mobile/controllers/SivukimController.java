@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Set;
 
 //@Api(description = "manage all the projects data")
-@CrossOrigin
+//@CrossOrigin
 @Controller
 @RequestMapping("/api/sivukim/")
 public class SivukimController {
