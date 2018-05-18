@@ -57,7 +57,7 @@ import com.mobile.domain.SikumTmuta;
 
 //@Api(description = "manage all the projects data")
 @Controller
-@RequestMapping("/api/notrulesivuk/")
+@RequestMapping("/api/notrulesivuk")
 public class NotruLesivukController {
     private final NotruLesivukService notruLesivukService;
 
@@ -66,7 +66,7 @@ public class NotruLesivukController {
     }
 
     //@ApiOperation(value = "get project by id partner", notes = "These are some notes about the API.")
-    @GetMapping({"/all/"})
+    @GetMapping({"/all"})
     public ResponseEntity<Set<NotruLesivuk>> getAllNotruLesivuk() {
         return new ResponseEntity<Set<NotruLesivuk>>(notruLesivukService.getAllNotruLesivuk(), HttpStatus.OK);
     }

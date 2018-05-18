@@ -13,7 +13,7 @@ import java.util.Set;
 
 //@Api(description = "manage all the projects data")
 @Controller
-@RequestMapping("/api/sikumtmuta/")
+@RequestMapping("/api/sikumtmuta")
 public class SikumTmutaController {
     private final SikumTmutaService sikumTmutaService;
 
@@ -22,7 +22,7 @@ public class SikumTmutaController {
     }
 
     //@ApiOperation(value = "get project by id partner", notes = "These are some notes about the API.")
-    @GetMapping({"/all/"})
+    @GetMapping({"/all"})
     public ResponseEntity<Set<SikumTmuta>> getAllsikumTmuta() {
         return new ResponseEntity<Set<SikumTmuta>>(sikumTmutaService.getAllsikumTmuta(), HttpStatus.OK);
     }

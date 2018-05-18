@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Database</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="Ctrl">
+  <div class="container-fluid">
+  <center><img src="images/logo_1.png"></center>
+  <div class="shadow">
+    
+  </div>
+  <div class="header_1">
+    <img src="images/text_1.png">
+  </div>       
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="text-right">id</th>
+        <th class="text-right">date</th>
+        <th class="text-right">farm</th>
+        <th class="text-right">gil</th>
+        <th class="text-right">hacnasa</th>
+        <th class="text-right">tmuta</th>
+        <th class="text-right">notru</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in sikumtmuta">
+        <td>{{ x.id }}</td>
+        <td>{{ x.date }}</td>
+        <td>{{ x.farm }}</td>
+        <td>{{ x.gil }}</td>
+        <td>{{ x.hacnasa }}</td>
+        <td>{{ x.tmuta }}</td>
+        <td>{{ x.notru }}</td>
+      </tr>
+    </tbody>
+  </table>  
+  <div class="header_1">
+    <img src="images/text_3.png">
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="text-right">id</th>
+        <th class="text-right">farm</th>
+        <th class="text-right">gil</th>
+        <th class="text-right">hachnasa</th>
+        <th class="text-right">tmuta</th>
+        <th class="text-right">sivuk</th>
+        <th class="text-right">notru</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in notrulesivuk">
+        <td>{{ x.id }}</td>
+        <td>{{ x.farm }}</td>
+        <td>{{ x.gil }}</td>
+        <td>{{ x.hachnasa }}</td>
+        <td>{{ x.tmuta }}</td>
+        <td>{{x.sivuk}}</td>
+        <td>{{ x.notru }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="header_1">
+    <img src="images/text_2.png">
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="text-right">id</th>
+        <th class="text-right">date</th>
+        <th class="text-right">farm</th>
+        <th class="text-right">lul</th>
+        <th class="text-right">yaad</th>
+        <th class="text-right">kamut</th>
+        <th class="text-right">mishkal</th>
+        <th class="text-right">memuza</th>
+        <th class="text-right">gil</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in sivukim">
+        <td>{{ x.id }}</td>
+        <td>{{ x.date }}</td>
+        <td>{{ x.farm }}</td>
+        <td>{{ x.lul }}</td>
+        <td>{{ x.yaad }}</td>
+        <td>{{ x.kamut }}</td>
+        <td>{{ x.mishkal }}</td>
+        <td>{{ x.memuza }}</td>
+        <td>{{ x.gil }}</td>
+      </tr>
+    </tbody>
+  </table>  
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

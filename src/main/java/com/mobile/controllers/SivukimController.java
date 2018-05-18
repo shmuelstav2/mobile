@@ -17,7 +17,7 @@ import java.util.Set;
 
 //@Api(description = "manage all the projects data")
 @Controller
-@RequestMapping("/api/sivukim/")
+@RequestMapping("/api/sivukim")
 public class SivukimController {
     private final SivukimService sivukimService;
 
@@ -26,7 +26,7 @@ public class SivukimController {
     }
 
     //@ApiOperation(value = "get project by id partner", notes = "These are some notes about the API.")
-    @GetMapping({"/all/"})
+    @GetMapping({"/all"})
     public ResponseEntity<Set<Sivukim>> getAllsikumTmuta() {
         return new ResponseEntity<Set<Sivukim>>(sivukimService.getAllSivukim(), HttpStatus.OK);
     }
