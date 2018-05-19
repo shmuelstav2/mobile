@@ -1,43 +1,48 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Login App</title>
-<!-- Custom Theme files -->
-<link href="css/style_1.css" rel="stylesheet" type="text/css" media="all"/>
-<link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
-<link rel="stylesheet" type="text/css" href="css/fonts/flaticon.css">
-<!-- Custom Theme files -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<meta name="keywords" content="" />
-<!--Google Fonts-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-<!--Google Fonts-->
- </head>
-<body>
+	<title>Login App</title>
+	<!-- Custom Theme files -->
+	<link href="css/style_1.css" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts/flaticon.css">
+	<!-- Custom Theme files -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<!--Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!--Google Fonts-->
+</head>
+<body ng-app="app">
+
 <!--sign up form start here-->
-<div class="login-box">
+<div class="login-box" ng-controller="Ctrl">
 	<center>
 		<img src="images/logo_4.png">
 	</center>
 	<div class="textbox">
 		<i class="flaticon-man-user"></i>
-		<input type="text" placeholder="שם משתמש" name="" value="">
+		<input ng-model="data.username"  type="text" placeholder="שם משתמש" name="" value="">
 	</div>
 	<div class="textbox">
 		<i class="flaticon-house-key"></i>
-		<input type="password" placeholder="סיסמה" name="" value="">
+		<input ng-model="data.password" type="password" placeholder="סיסמה" name="" value="">
 	</div>
-	<center>
-		<button>
-		<a href="#">התחברות</a>
-	</button>
-	</center>
+	<center><span style="color: #ff8075">{{error}}</span></center>
+	<div style="text-align: center;">
+		<button ng-click="login()">
+			<a href="#">התחברות</a>
+		</button>
+
+	</div>
 </div>
 
 <!--sign up form end here-->
 <script src="js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 
