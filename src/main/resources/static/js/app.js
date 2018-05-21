@@ -1,23 +1,36 @@
 var app = angular.module('app', []);
-    app.controller('Ctrl', function($scope, $http) {
+app.controller('Ctrl', function ($scope, $filter, $http) {
 
-        function sikumtmuta(){
-            $http.get("http://localhost:8080/api/sikumtmuta/all")
-                .then(function (response) {$scope.sikumtmuta = response.data;});
-        }
+    function sikumtmuta() {
+        $http.get("/api/sikumtmuta/all")
+            .then(function (response) {
+                $scope.sikumtmuta = response.data;
+                $scope.sikumtmuta = $filter('orderBy')($scope.sikumtmuta, 'id', false)
+            });
+    }
 
-        function sivukim(){
-            $http.get("http://localhost:8080/api/sivukim/all")
-                .then(function (response) {$scope.sivukim = response.data;});
-        }
+    function sivukim() {
+        $http.get("/api/sivukim/all")
+            .then(function (response) {
+                $scope.sivukim = response.data;
+                $scope.sivukim = $filter('orderBy')($scope.sivukim, 'id', false)
+            });
+    }
 
-        function notrulesivuk(){
-            $http.get("http://localhost:8080/api/notrulesivuk/all")
-                .then(function (response) {$scope.notrulesivuk = response.data;});
-        }
+    function notrulesivuk() {
+        $http.get("/api/notrulesivuk/all")
+            .then(function (response) {
+                $scope.notrulesivuk = response.data;
+                $scope.notrulesivuk = $filter('orderBy')($scope.notrulesivuk, 'id', false)
+            });
+    }
 
-        sikumtmuta();
-        sivukim();
-        notrulesivuk();
+    function sort(x) {
 
-    });
+    }
+
+    sikumtmuta();
+    sivukim();
+    notrulesivuk();
+
+});

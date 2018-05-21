@@ -30,7 +30,7 @@
 		<i class="flaticon-house-key"></i>
 		<input ng-model="data.password" type="password" placeholder="סיסמה" name="" value="">
 	</div>
-	<center><span style="color: #ff8075">{{error}}</span></center>
+	<center><span style="color: #ff8075" ng-bind="error"></span></center>
 	<div style="text-align: center;">
 		<button ng-click="login()">
 			<a href="#">התחברות</a>

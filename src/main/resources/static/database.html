@@ -33,13 +33,13 @@
     </thead>
     <tbody>
       <tr ng-repeat="x in sikumtmuta">
-        <td>{{ x.id }}</td>
-        <td>{{ x.date }}</td>
-        <td>{{ x.farm }}</td>
-        <td>{{ x.gil }}</td>
-        <td>{{ x.hacnasa }}</td>
-        <td>{{ x.tmuta }}</td>
-        <td>{{ x.notru }}</td>
+        <td ng-bind="x.id"></td>
+        <td ng-bind="x.date | date : 'dd/MM/yy'"></td>
+        <td ng-bind="x.farm"></td>
+        <td ng-bind="x.gil"></td>
+        <td ng-bind="x.hacnasa"></td>
+        <td ng-bind="x.tmuta"></td>
+        <td ng-bind="x.notru"></td>
       </tr>
     </tbody>
   </table>  
@@ -60,13 +60,13 @@
     </thead>
     <tbody>
       <tr ng-repeat="x in notrulesivuk">
-        <td>{{ x.id }}</td>
-        <td>{{ x.farm }}</td>
-        <td>{{ x.gil }}</td>
-        <td>{{ x.hachnasa }}</td>
-        <td>{{ x.tmuta }}</td>
-        <td>{{x.sivuk}}</td>
-        <td>{{ x.notru }}</td>
+        <td ng-bind="x.id"></td>
+        <td ng-bind="x.farm"></td>
+        <td ng-bind="x.gil"></td>
+        <td ng-bind="x.hachnasa"></td>
+        <td ng-bind="x.tmuta"></td>
+        <td ng-bind="x.sivuk"></td>
+        <td ng-bind="x.notru"></td>
       </tr>
     </tbody>
   </table>
@@ -89,15 +89,15 @@
     </thead>
     <tbody>
       <tr ng-repeat="x in sivukim">
-        <td>{{ x.id }}</td>
-        <td>{{ x.date }}</td>
-        <td>{{ x.farm }}</td>
-        <td>{{ x.lul }}</td>
-        <td>{{ x.yaad }}</td>
-        <td>{{ x.kamut }}</td>
-        <td>{{ x.mishkal }}</td>
-        <td>{{ x.memuza }}</td>
-        <td>{{ x.gil }}</td>
+        <td ng-bind="x.id"></td>
+        <td ng-bind="x.date | date : 'dd/MM/yy'"></td>
+        <td ng-bind="x.farm"></td>
+        <td ng-bind="x.lul"></td>
+        <td ng-bind="x.yaad"></td>
+        <td ng-bind="x.kamut"></td>
+        <td ng-bind="x.mishkal"></td>
+        <td ng-bind="x.memuza"></td>
+        <td ng-bind="x.gil"></td>
       </tr>
     </tbody>
   </table>  

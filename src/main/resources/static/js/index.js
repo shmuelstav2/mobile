@@ -4,7 +4,7 @@ app.controller('Ctrl', function ($scope, $http, $window) {
     $scope.data = {}
 
     $scope.login = function () {
-        $http.post("http://localhost:8080/api/login", $scope.data)
+        $http.post("/api/login", $scope.data)
             .then(handleLogin,handleLogin);
     };
 

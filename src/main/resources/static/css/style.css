@@ -5,7 +5,10 @@ body{
 	padding: 0;
 	font-family: san-serif;
 	background-size: cover;
+    font-size: xx-small;
 }
+
+
 .login-box{
 	width: 280px;
 	position: absolute;
