@@ -100,8 +100,8 @@ center{
 	width: 95px;
 }
 .container-fluid {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+    padding-right: auto;
+    padding-left: auto;
     margin-right: auto;
     margin-left: auto;
 }
@@ -115,5 +115,5 @@ center{
 	padding: 25px;
 }
 .header_1 img {
-	width : 80px;
+	width : 55px;
 }

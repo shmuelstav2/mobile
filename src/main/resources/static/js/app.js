@@ -25,10 +25,6 @@ app.controller('Ctrl', function ($scope, $filter, $http) {
             });
     }
 
-    function sort(x) {
-
-    }
-
     sikumtmuta();
     sivukim();
     notrulesivuk();
