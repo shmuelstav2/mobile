@@ -1,5 +1,5 @@
 var app = angular.module('app', []);
-app.controller('Ctrl', function ($scope, $filter, $http) {
+app.controller('Ctrl', function ($scope, $filter, $http, $window) {
 
     function sikumtmuta() {
         $http.get("/api/sikumtmuta/all")
@@ -25,8 +25,11 @@ app.controller('Ctrl', function ($scope, $filter, $http) {
             });
     }
 
-    sikumtmuta();
-    sivukim();
-    notrulesivuk();
+    if($window.localStorage.getItem('login')=='1'){
+        sikumtmuta();
+        sivukim();
+        notrulesivuk();
+    }else
+        $window.location.href = '/';
 
 });
