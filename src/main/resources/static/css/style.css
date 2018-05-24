@@ -139,6 +139,13 @@ center img {
     width: 55px;
 }
 
+@media only screen and (max-width: 319px) {
+    /*--- Smaller screen ---*/
+    body {
+        font-size: 6px !important;
+    }
+}
+
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     /*--- Mobile portrait ---*/
     body {
@@ -180,3 +187,9 @@ center img {
         font-size: 15px !important;
     }
 }
+
+/*@media only screen and  (max-width: 480px) {*/
+    /*body {*/
+        /*font-size: 7px !important;*/
+    /*}*/
+/*}*/
