@@ -17,33 +17,37 @@
     
   </div>
   <div class="header_1">
-    <img src="images/text_2.png">
-  </div>       
-  <table class="table table-bordered" >
-    <thead>
+    <img src="images/text_1.png">
+  </div>
+    <table class="table table-bordered">
+      <thead>
       <tr>
         <th class="text-right">id</th>
         <th class="text-right">date</th>
         <th class="text-right">farm</th>
+        <th class="text-right">lul</th>
+        <th class="text-right">yaad</th>
+        <th class="text-right">kamut</th>
+        <th class="text-right">mishkal</th>
+        <th class="text-right">memuza</th>
         <th class="text-right">gil</th>
-        <th class="text-right">hacnasa</th>
-        <th class="text-right">tmuta</th>
-        <th class="text-right">notru</th>
       </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="x in sikumtmuta">
+      </thead>
+      <tbody>
+      <tr ng-repeat="x in sivukim">
         <td ng-bind="x.id"></td>
         <td ng-bind="x.date | date : 'dd/MM/yy'"></td>
         <td ng-bind="x.farm"></td>
+        <td ng-bind="x.lul"></td>
+        <td ng-bind="x.yaad"></td>
+        <td ng-bind="x.kamut"></td>
+        <td ng-bind="x.mishkal"></td>
+        <td ng-bind="x.memuza"></td>
         <td ng-bind="x.gil"></td>
-        <td ng-bind="x.hacnasa"></td>
-        <td ng-bind="x.tmuta"></td>
-        <td ng-bind="x.notru"></td>
       </tr>
-    </tbody>
-  </table>  
-  <div class="header_1">
+      </tbody>
+    </table>
+    <div class="header_1">
     <img src="images/text_3.png">
   </div>
   <table class="table table-bordered">
@@ -71,36 +75,33 @@
     </tbody>
   </table>
   <div class="header_1">
-    <img src="images/text_1.png">
+    <img src="images/text_2.png">
   </div>
-  <table class="table table-bordered">
-    <thead>
+    <table class="table table-bordered" >
+      <thead>
       <tr>
         <th class="text-right">id</th>
         <th class="text-right">date</th>
         <th class="text-right">farm</th>
-        <th class="text-right">lul</th>
-        <th class="text-right">yaad</th>
-        <th class="text-right">kamut</th>
-        <th class="text-right">mishkal</th>
-        <th class="text-right">memuza</th>
         <th class="text-right">gil</th>
+        <th class="text-right">hacnasa</th>
+        <th class="text-right">tmuta</th>
+        <th class="text-right">notru</th>
       </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="x in sivukim">
+      </thead>
+      <tbody>
+      <tr ng-repeat="x in sikumtmuta">
         <td ng-bind="x.id"></td>
         <td ng-bind="x.date | date : 'dd/MM/yy'"></td>
         <td ng-bind="x.farm"></td>
-        <td ng-bind="x.lul"></td>
-        <td ng-bind="x.yaad"></td>
-        <td ng-bind="x.kamut"></td>
-        <td ng-bind="x.mishkal"></td>
-        <td ng-bind="x.memuza"></td>
         <td ng-bind="x.gil"></td>
+        <td ng-bind="x.hacnasa"></td>
+        <td ng-bind="x.tmuta"></td>
+        <td ng-bind="x.notru"></td>
       </tr>
-    </tbody>
-  </table>  
+      </tbody>
+    </table>
+
 </div>
 </div>
 
