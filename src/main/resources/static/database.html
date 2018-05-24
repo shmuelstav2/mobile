@@ -8,17 +8,71 @@
   <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body style="font-size: 9px !important; overflow-x:auto;" ng-app="app">
+<body style="overflow-x: none;" ng-app="app">
 
 <div ng-controller="Ctrl">
   <center><img src="images/logo_1.png"></center>
   <div class="container-fluid">
-  <div class="shadow">
-    
-  </div>
-  <div class="header_1">
-    <img src="images/text_1.png">
-  </div>
+    <div class="shadow">
+
+    </div>
+    <div class="header_1">
+      <img src="images/text_1.png">
+    </div>
+    <table class="table table-bordered" >
+      <thead>
+      <tr>
+        <th class="text-right">id</th>
+        <th class="text-right">date</th>
+        <th class="text-right">farm</th>
+        <th class="text-right">gil</th>
+        <th class="text-right">hacnasa</th>
+        <th class="text-right">tmuta</th>
+        <th class="text-right">notru</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="x in sikumtmuta">
+        <td ng-bind="x.id"></td>
+        <td ng-bind="x.date | date : 'dd/MM/yy'"></td>
+        <td ng-bind="x.farm"></td>
+        <td ng-bind="x.gil"></td>
+        <td ng-bind="x.hacnasa"></td>
+        <td ng-bind="x.tmuta"></td>
+        <td ng-bind="x.notru"></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="header_1">
+      <img src="images/text_3.png">
+    </div>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th class="text-right">id</th>
+        <th class="text-right">farm</th>
+        <th class="text-right">gil</th>
+        <th class="text-right">hachnasa</th>
+        <th class="text-right">tmuta</th>
+        <th class="text-right">sivuk</th>
+        <th class="text-right">notru</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="x in notrulesivuk">
+        <td ng-bind="x.id"></td>
+        <td ng-bind="x.farm"></td>
+        <td ng-bind="x.gil"></td>
+        <td ng-bind="x.hachnasa"></td>
+        <td ng-bind="x.tmuta"></td>
+        <td ng-bind="x.sivuk"></td>
+        <td ng-bind="x.notru"></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="header_1">
+      <img src="images/text_2.png">
+    </div>
     <table class="table table-bordered">
       <thead>
       <tr>
@@ -47,62 +101,7 @@
       </tr>
       </tbody>
     </table>
-    <div class="header_1">
-    <img src="images/text_3.png">
   </div>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th class="text-right">id</th>
-        <th class="text-right">farm</th>
-        <th class="text-right">gil</th>
-        <th class="text-right">hachnasa</th>
-        <th class="text-right">tmuta</th>
-        <th class="text-right">sivuk</th>
-        <th class="text-right">notru</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="x in notrulesivuk">
-        <td ng-bind="x.id"></td>
-        <td ng-bind="x.farm"></td>
-        <td ng-bind="x.gil"></td>
-        <td ng-bind="x.hachnasa"></td>
-        <td ng-bind="x.tmuta"></td>
-        <td ng-bind="x.sivuk"></td>
-        <td ng-bind="x.notru"></td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="header_1">
-    <img src="images/text_2.png">
-  </div>
-    <table class="table table-bordered" >
-      <thead>
-      <tr>
-        <th class="text-right">id</th>
-        <th class="text-right">date</th>
-        <th class="text-right">farm</th>
-        <th class="text-right">gil</th>
-        <th class="text-right">hacnasa</th>
-        <th class="text-right">tmuta</th>
-        <th class="text-right">notru</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr ng-repeat="x in sikumtmuta">
-        <td ng-bind="x.id"></td>
-        <td ng-bind="x.date | date : 'dd/MM/yy'"></td>
-        <td ng-bind="x.farm"></td>
-        <td ng-bind="x.gil"></td>
-        <td ng-bind="x.hacnasa"></td>
-        <td ng-bind="x.tmuta"></td>
-        <td ng-bind="x.notru"></td>
-      </tr>
-      </tbody>
-    </table>
-
-</div>
 </div>
 
 
