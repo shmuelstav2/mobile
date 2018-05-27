@@ -25,11 +25,11 @@ app.controller('Ctrl', function ($scope, $filter, $http, $window) {
             });
     }
 
-    if($window.localStorage.getItem('login')=='1'){
+    if(window.localStorage.getItem('login')=='1'){
         sikumtmuta();
         sivukim();
         notrulesivuk();
     }else
-        $window.location.href = '/';
+        window.location.href = '/';
 
 });

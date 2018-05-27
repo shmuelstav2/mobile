@@ -10,8 +10,8 @@ app.controller('Ctrl', function ($scope, $http, $window, $window) {
 
     function handleLogin(response) {
         if(response.status==200){
-            $window.localStorage.setItem('login', '1');
-            $window.location.href = '/database.html';
+            window.localStorage.setItem('login', '1');
+            window.location.href = '/database.html';
         }else {
             $scope.error = "Invalid username or password";
         }
