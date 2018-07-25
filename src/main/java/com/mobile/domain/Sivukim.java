@@ -31,6 +31,7 @@ public class Sivukim {
     private Integer kamut;
     private Integer mishkal;
     private BigDecimal memuza;
+    private BigDecimal hefresh;
     private Integer gil;
 }
 
