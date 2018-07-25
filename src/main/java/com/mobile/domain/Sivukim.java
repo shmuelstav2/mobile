@@ -10,16 +10,6 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.sql.Date;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-        import lombok.Data;
-        import lombok.NoArgsConstructor;
-
-        import javax.persistence.*;
-        import java.sql.Date;
-        import java.util.HashSet;
-        import java.util.Objects;
-        import java.util.Set;
-
 
 @Data
 @Entity

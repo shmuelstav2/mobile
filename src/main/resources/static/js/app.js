@@ -25,11 +25,19 @@ app.controller('Ctrl', function ($scope, $filter, $http, $window) {
             });
     }
 
-    if(window.localStorage.getItem('login')=='1'){
+    $scope.changeText = function (x) {
+        if (x < 0) {
+            x+="";
+            x =  x.substring(1, x.length)+"-"
+        }
+        return x;
+    }
+
+    if (window.localStorage.getItem('login') == '1') {
         sikumtmuta();
         sivukim();
         notrulesivuk();
-    }else
+    } else
         window.location.href = '/';
 
 });
